@@ -1,0 +1,45 @@
+P.L.A.N.O.S/
+├── game/
+│   ├── 00_definitions.rpy          # Personajes, variables globales, init python:
+│   ├── 01_gui_overrides.rpy        # Personalización profunda de GUI (temas melancólicos)
+│   ├── 02_style.rpy                # Estilos ATL, transiciones custom
+│   ├── common/                     # Cosas reutilizables en TODO el juego
+│   │   ├── characters.rpy          # Clases Python para almas (trauma, estado, afinidad/sanity)
+│   │   ├── trauma_data.rpy         # Diccionarios o clases con traumas predefinidos
+│   │   ├── inventory_emotional.rpy # "Items" simbólicos (recuerdos, pistas emocionales)
+│   │   ├── utils.rpy               # Funciones helper (fade emocional, sanity check, etc.)
+│   │   └── persistent_data.rpy     # Logros, flags globales persistentes
+│   ├── sectors/                    # Uno por capa/sector (no lineal)
+│   │   ├── sector_00_hub.rpy       # Menú central / "disco principal"
+│   │   ├── sector_city_ruins.rpy
+│   │   ├── sector_infinite_forest.rpy
+│   │   ├── sector_suburbs.rpy
+│   │   ├── sector_data_desert.rpy
+│   │   └── ... (crea uno por sector)
+│   ├── souls/                      # Cada alma/criatura en su archivo
+│   │   ├── soul_001_dog_abuse.rpy  # Diálogos, minijuego emocional, transformación
+│   │   ├── soul_002_cat_bullying.rpy
+│   │   ├── soul_003_pig_politician.rpy  # No sanable, diálogos antagonistas
+│   │   └── ...
+│   ├── narrative_core/
+│   │   ├── ralix_encounters.rpy    # Apariciones de Ralix + meta-revelaciones
+│   │   ├── endings.rpy             # Múltiples finales (basados en % almas sanadas + relación Ralix)
+│   │   └── meta_questions.rpy      # Diálogos finales filosóficos
+│   ├── screens/
+│   │   ├── screen_map.rpy          # Mapa mundial interactivo (sectores desbloqueables)
+│   │   ├── screen_soul_status.rpy  # HUD / journal de almas encontradas y progreso
+│   │   ├── screen_minigame_empathy.rpy  # Plantilla reutilizable para minijuegos emocionales
+│   │   ├── screen_dialogue_choice.rpy   # Menús de diálogo ramificados con consecuencias emocionales
+│   │   └── screen_cinematic.rpy    # Para cutscenes de transformación
+│   ├── images/
+│   │   ├── bg/                     # Fondos por sector
+│   │   ├── souls/                  # Criaturas + formas humanas
+│   │   ├── pigs/                   # Variantes de cerdos antropomórficos
+│   │   └── effects/                # Glitches, distorsiones digitales, partículas melancólicas
+│   └── audio/
+│       ├── bgm/                    # Pistas por sector/emoción
+│       └── sfx/                    # Efectos de trauma (llanto distorsionado, glitch, heartbeat)
+└── ... (opciones.rpy, splashscreen, etc. por defecto)
+
+Git/Github
+Nomenclatura clara y consistente: ep/XX-descripcion-corta-en-kebab-case
